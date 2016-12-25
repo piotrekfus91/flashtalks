@@ -19,13 +19,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TraitDemo {
     private List<String> messages = new ArrayList<>();
     private Log log = (msg) -> messages.add(msg);
-    private Human johnDoe = new Human(log, 20, 1.8, "John Doe");
-    private Human youngJohnDoe = new Human(log, 12, 1.5, "Johnny Doe");
-    private Ostrich theRoadRunner = new Ostrich(log, 2.5, "The Road Runner");
-    private Duck theUglyDuckling = new Duck(log, 1);
-    private Duck theBeautifulSwan = new Duck(log, 3);
-    private Sparrow jack = new Sparrow(log, 3);
-    private Sparrow elemelek = new Sparrow(log, 1);
+    private Human johnDoe = Human.builder().log(log).age(20).height(1.8).name("John Doe").build();
+    private Human youngJohnDoe = Human.builder().log(log).age(12).height(1.5).name("Johnny Doe").build();
+    private Ostrich theRoadRunner = Ostrich.builder().log(log).height(2.5).name("The Road Runner").build();
+    private Duck theUglyDuckling = Duck.builder().log(log).age(1).build();
+    private Duck theBeautifulSwan = Duck.builder().log(log).age(3).build();
+    private Sparrow jack = Sparrow.builder().log(log).age(3).build();
+    private Sparrow elemelek = Sparrow.builder().log(log).age(1).build();
 
     private List<Object> objects = Lists.newArrayList(
             johnDoe, youngJohnDoe, theRoadRunner, theUglyDuckling,
