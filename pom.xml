@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>javatraits</module>
+        <module>hashmapperformance</module>
     </modules>
     <packaging>pom</packaging>
 

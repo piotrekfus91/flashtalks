@@ -1,0 +1,23 @@
+Java 7
+
+Benchmark                                                        Mode  Cnt     Score     Error  Units
+HashmapPerformanceTester.fetchComparableWithBigDispersion       thrpt   10  1753.742 ± 238.482  ops/s
+HashmapPerformanceTester.fetchComparableWithSmallDispersion     thrpt   10  1676.643 ± 384.409  ops/s
+HashmapPerformanceTester.fetchNonComparableWithBigDispersion    thrpt   10  1668.456 ± 328.781  ops/s
+HashmapPerformanceTester.fetchNonComparableWithSmallDispersion  thrpt   10  1606.060 ± 332.713  ops/s
+HashmapPerformanceTester.fillComparableWithBigDispersion        thrpt   10   652.313 ±  62.895  ops/s
+HashmapPerformanceTester.fillComparableWithSmallDispersion      thrpt   10   694.986 ±  24.629  ops/s
+HashmapPerformanceTester.fillNonComparableWithBigDispersion     thrpt   10   600.965 ± 231.699  ops/s
+HashmapPerformanceTester.fillNonComparableWithSmallDispersion   thrpt   10   678.725 ± 125.850  ops/s
+
+Java 8
+
+Benchmark                                                        Mode  Cnt    Score     Error  Units
+HashmapPerformanceTester.fetchComparableWithBigDispersion       thrpt   10  567.047 ±  10.701  ops/s
+HashmapPerformanceTester.fetchComparableWithSmallDispersion     thrpt   10  627.221 ±  24.592  ops/s
+HashmapPerformanceTester.fetchNonComparableWithBigDispersion    thrpt   10  563.996 ± 129.539  ops/s
+HashmapPerformanceTester.fetchNonComparableWithSmallDispersion  thrpt   10  470.963 ±  60.136  ops/s
+HashmapPerformanceTester.fillComparableWithBigDispersion        thrpt   10  309.799 ±  19.692  ops/s
+HashmapPerformanceTester.fillComparableWithSmallDispersion      thrpt   10  290.148 ±  73.849  ops/s
+HashmapPerformanceTester.fillNonComparableWithBigDispersion     thrpt   10  302.624 ±  43.650  ops/s
+HashmapPerformanceTester.fillNonComparableWithSmallDispersion   thrpt   10  296.743 ±  73.811  ops/s
