@@ -18,33 +18,33 @@ import java.util.Random;
 
 @State(Scope.Benchmark)
 public class HashmapPerformanceTester {
-    private Map<NonComparableClass, Object> nonComparableWithBigDispersionMap = new HashMap<>();
-    private Map<NonComparableClass, Object> nonComparableWithSmallDispersionMap = new HashMap<>();
-    private Map<NonComparableClass, Object> comparableWithBigDispersionMap = new HashMap<>();
-    private Map<NonComparableClass, Object> comparableWithSmallDispersionMap = new HashMap<>();
+    private Map<NonComparableClass, Object> nonComparableWithBigDispersionMap = new HashMap<>(100);
+    private Map<NonComparableClass, Object> nonComparableWithSmallDispersionMap = new HashMap<>(10);
+    private Map<NonComparableClass, Object> comparableWithBigDispersionMap = new HashMap<>(100);
+    private Map<NonComparableClass, Object> comparableWithSmallDispersionMap = new HashMap<>(10);
     // those below look ugly, but they were used to test on Java 7
     private Function<Long, NonComparableClass> nonComparableClassBigDispersionFunction = new Function<Long, NonComparableClass>() {
         @Override
         public NonComparableClass apply(Long l) {
-            return new NonComparableClass(l, 1000);
+            return new NonComparableClass(l, 100);
         }
     };
     private Function<Long, NonComparableClass> nonComparableClassSmallDispersionFunction = new Function<Long, NonComparableClass>() {
         @Override
         public NonComparableClass apply(Long l) {
-            return new NonComparableClass(l, 1000);
+            return new NonComparableClass(l, 10);
         }
     };
     private Function<Long, NonComparableClass> comparableClassBigDispersionFunction = new Function<Long, NonComparableClass>() {
         @Override
         public NonComparableClass apply(Long l) {
-            return new NonComparableClass(l, 1000);
+            return new NonComparableClass(l, 100);
         }
     };
     private Function<Long, NonComparableClass> comparableClassSmallDispersionFunction = new Function<Long, NonComparableClass>() {
         @Override
         public NonComparableClass apply(Long l) {
-            return new NonComparableClass(l, 1000);
+            return new NonComparableClass(l, 10);
         }
     };
 
