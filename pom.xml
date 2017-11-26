@@ -11,11 +11,12 @@
         <module>javatraits</module>
         <module>hashmapperformance</module>
         <module>thread-dump</module>
+        <module>signed-sealed</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
-        <kotlin.version>1.0.7</kotlin.version>
+        <kotlin.version>1.1.60</kotlin.version>
     </properties>
 
     <dependencies>
@@ -23,6 +24,18 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.spek</groupId>
+            <artifactId>spek-api</artifactId>
+            <version>1.1.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.spek</groupId>
+            <artifactId>spek-junit-platform-engine</artifactId>
+            <version>1.1.5</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
