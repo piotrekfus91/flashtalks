@@ -12,6 +12,7 @@
         <module>hashmapperformance</module>
         <module>thread-dump</module>
         <module>signed-sealed</module>
+        <module>oom</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -40,6 +41,15 @@
     </dependencies>
 
     <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
