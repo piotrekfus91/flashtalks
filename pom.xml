@@ -13,6 +13,7 @@
         <module>thread-dump</module>
         <module>signed-sealed</module>
         <module>oom</module>
+        <module>kotlinlang</module>
     </modules>
     <packaging>pom</packaging>
 
