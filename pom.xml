@@ -14,6 +14,7 @@
         <module>signed-sealed</module>
         <module>oom</module>
         <module>kotlinlang</module>
+        <module>dist-locks</module>
     </modules>
     <packaging>pom</packaging>
 

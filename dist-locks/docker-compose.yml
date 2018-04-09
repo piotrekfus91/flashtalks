@@ -1,0 +1,11 @@
+---
+version: '2'
+services:
+  zk:
+    image: zookeeper
+    restart: always
+    hostname: zk
+    ports:
+      - 2181:2181
+    environment:
+      ZOO_MY_ID: 1
