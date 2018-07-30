@@ -50,7 +50,7 @@ class Receivers {
                     it.setExecutable(true)
                 }
             }
-            .absolutePath
+            .let { it.absolutePath }
             .let { URL("file://$it") }
             .takeIf { File(it.path).exists() }
             ?.path ?: "not found extensions"
@@ -66,12 +66,19 @@ class Receivers {
 
     val shoutItLoudly2: String.(times: Int) -> String = { this + "!".repeat(it)}
 
+    val countLength: String.() -> Int = { this.length }
+
+    fun mapMe(str: String, f: String.() -> Int): Int {
+        return str.f()
+    }
+
     fun receiversTesting() {
         printLength("abc")
         printLength2("abc")
         println(shoutIt("abc"))
         println(shoutItLoudly("abc", 3))
         println(shoutItLoudly2("abc", 5))
+        println(mapMe("abcdef", countLength))
     }
 
     fun withReceivers(): String = File("/tmp/path")
@@ -103,10 +110,10 @@ class Receivers {
 
 fun main(args: Array<String>) {
     val receivers = Receivers()
+    println(receivers.plain())
 //    receivers.extensionsTesting()
-//    receivers.receiversTesting()
-//    println(receivers.plain())
 //    println(receivers.withExtensionFunctions())
+//    receivers.receiversTesting()
 //    println(receivers.withReceivers())
-    println(receivers.together())
+//    println(receivers.together())
 }
