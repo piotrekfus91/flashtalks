@@ -15,6 +15,7 @@
         <module>oom</module>
         <module>kotlinlang</module>
         <module>dist-locks</module>
+        <module>algorithms</module>
     </modules>
     <packaging>pom</packaging>
 
